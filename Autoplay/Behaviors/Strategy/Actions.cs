@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,9 +17,6 @@ namespace AIM.Autoplay.Behaviors.Strategy
 {
     internal class Actions
     {
-        /// <summary>
-        /// This Behavior Action will make the bot go all in without any consideration just to push the lane.
-        /// </summary>
         internal BehaviorAction PushLane = new BehaviorAction(
             () =>
             {
@@ -72,9 +69,6 @@ namespace AIM.Autoplay.Behaviors.Strategy
                 return BehaviorState.Failure;
             });
 
-        /// <summary>
-        /// This Behavior Action will make the bot stay in the safe exp zone
-        /// </summary>
         internal BehaviorAction StayWithinExpRange = new BehaviorAction(
             () =>
             {
@@ -120,9 +114,6 @@ namespace AIM.Autoplay.Behaviors.Strategy
                 return BehaviorState.Success;
             });
 
-        /// <summary>
-        /// This BehaviorAction will make the bot go all in for a kill, l0l bronze bot
-        /// </summary>
         internal BehaviorAction KillEnemy = new BehaviorAction(
             () =>
             {
@@ -153,10 +144,6 @@ namespace AIM.Autoplay.Behaviors.Strategy
                 Orbwalking.SetMovementDelay(Modes.Base.Menu.Item("MovementDelay").GetValue<Slider>().Value);
                 return BehaviorState.Success;
             });
-
-        /// <summary>
-        /// This behavior action makes the bot collect a health relic
-        /// </summary>
         internal BehaviorAction CollectHealthRelic = new BehaviorAction(
             () =>
             {
@@ -172,10 +159,6 @@ namespace AIM.Autoplay.Behaviors.Strategy
                 Orbwalking.SetMovementDelay(Modes.Base.Menu.Item("MovementDelay").GetValue<Slider>().Value);
                 return BehaviorState.Success;
             });
-
-        /// <summary>
-        /// This Behavior action makes the bot walk to the farthest turret and orbwalk there spurdo
-        /// </summary>
         internal BehaviorAction ProtectFarthestTurret = new BehaviorAction(
             () =>
             {
@@ -203,9 +186,6 @@ namespace AIM.Autoplay.Behaviors.Strategy
                 return BehaviorState.Success;
             });
 
-        /// <summary>
-        /// This is the Teamfight Behavior, pretty self explainatory
-        /// </summary>
         internal BehaviorAction Teamfight = new BehaviorAction(
             () =>
             {
